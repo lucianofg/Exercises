@@ -1,0 +1,9 @@
+.metals
+*.class
+*.o
+*.out
+
+__pycache__/
+*.py[cod]
+*$py.class
+

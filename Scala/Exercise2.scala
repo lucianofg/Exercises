@@ -2,10 +2,10 @@
 // is sorted according to a given comparison function
 
 object Exercise2 {
-  def isSorted[A](array: Array[A], comp: (A, A) => Boolean): Boolean = {
+  def isSorted[A](array: Array[A], cmp: (A, A) => Boolean): Boolean = {
     def go(i: Int): Boolean = {
       if (array.length > i + 1) {
-        if (comp(array(i), array(i + 1))) go(i + 1)
+        if (cmp(array(i), array(i + 1))) go(i + 1)
         else false
       } else true
     }
