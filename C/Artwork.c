@@ -49,14 +49,14 @@ int main(void)
         }
     }
 
-    bool blocked = true;
+    bool blocked = false;
     bool discovered[k+2];
     memset(discovered, false, sizeof discovered);
 
     for (int i = 0, j = 1; j < k + 2 && i < k + 2; j++) {
         if (adjacency_matrix[i][j]) {
             if (j == 1) {
-                blocked = false;
+                blocked = true;
                 break;
             } else if (i != j && !discovered[j]) {
                 discovered[j] = true;
