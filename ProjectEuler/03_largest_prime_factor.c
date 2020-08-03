@@ -1,7 +1,6 @@
 /* What is the largest prime factor of 600851475143 */
 /* Taken from https://projecteuler.net/problem=3 */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 

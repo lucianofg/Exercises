@@ -13,15 +13,14 @@ int calc_fibonacci(int nth) {
     return fibonacci[nth];
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     int sum = 0;
     for (int i = 1; i < SIZE; i++) {
         int tmp = calc_fibonacci(i);
         if (tmp > 4000000)
             break;
-        
-        if(tmp%2 != 0)
+
+        if (tmp % 2 != 0)
             sum += tmp;
     }
 
