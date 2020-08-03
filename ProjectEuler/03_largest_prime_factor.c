@@ -2,7 +2,6 @@
 /* Taken from https://projecteuler.net/problem=3 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void) {
     long number = 600851475143;
