@@ -16,7 +16,7 @@ void solution(int *input, int *output, int n) {
         output[i] = res / input[i];
 }
 
-/* What if you can't use division? :D*/
+/* What if you can't use division? :D */
 void without_division(int *input, int *output, int n) {
     for (int i = 0; i < n; i++) {
         output[i] = 1;

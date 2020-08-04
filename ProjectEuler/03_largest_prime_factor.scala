@@ -12,9 +12,9 @@ object LargestPrimeFactor {
       } else {
         largest_prime_factor(quotient / number, 2, largest)
       }
-      } else {
-        largest_prime_factor(quotient, number + 1, largest)
-      }
+    } else {
+      largest_prime_factor(quotient, number + 1, largest)
+    }
   }
 
   def main(args: Array[String]): Unit = {
