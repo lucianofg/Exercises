@@ -1,3 +1,7 @@
+# What is the smallest positive number that is evenly divisible by all of the
+# numbers from 1 to 20?
+# Problem taken from https://projecteuler.net/problem=5
+
 i = 20
 while True:
     i += 20
