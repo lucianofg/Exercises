@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-/* (x,y) for the coordinates of the certer of the circle, d for
- * de diameter */
+/* (x,y) for the coordinates of the certer of the circle, r for
+ * the radius*/
 bool they_overlap(int x1, int y1, int r1, int x2, int y2, int r2) {
     float radius = (r1 + r2) * (r1 + r2);
     float distance = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
