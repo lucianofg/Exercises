@@ -25,13 +25,13 @@ def deserialize(tree):
     def ds(nodes):
         if len(nodes) == 0:
             return
-        if (nodes[0] == 'None'):
+        if nodes[0] == 'None':
             val = None
         else:
             val = nodes[0]
         nodes.remove(nodes[0])
         left = ds(nodes)
-        right= ds(nodes)
+        right = ds(nodes)
         return Node(val, left, right)
 
     splitted_tree = tree.split(' ')
