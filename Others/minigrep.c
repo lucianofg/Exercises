@@ -41,11 +41,13 @@ void search_in_file(char *query, char *filename) {
         exit(EXIT_FAILURE);
     }
 
-    size_t line_size = 0;
     char *line;
+    size_t line_size = 0;
+    int line_number = 1;
     while (getline(&line, &line_size, file) != -1) {
         if (strstr(line, query) != NULL) {
-            printf("%s", line);
+            printf("%d: %s", line_number, line);
         }
+        line_number++;
     }
 }
