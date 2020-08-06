@@ -2,6 +2,7 @@
 // Taken from https://projecteuler.net/problem=1
 
 object MultiplesOf3And5 {
+  @annotation.tailrec
   def calc (max: Int, sum: Int): Int = {
     if (max == 1) sum
     else {
