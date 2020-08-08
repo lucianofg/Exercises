@@ -35,8 +35,7 @@ object Teste {
 
   // Exercise 2: Implement the function tail for "removing" the 
   // first element of a List.
-  def tail[A](list: List[A]): List[A] =
-    list match {
+  def tail[A](list: List[A]): List[A] = list match {
       case Nil => list
       case Cons(_, l) => l
     }
@@ -58,5 +57,20 @@ object Teste {
       case _ => list
     }
   
-  // Exercise 5: 
+  // Exercise 5: Using the same idea, implement the function setHead
+  // for replacing the first element of a List with a different value
+  def setHead[A](list: List[A], element: A): List[A] = list match {
+      case Cons(x, y) => Cons(element, y)
+      case Nil => List(element)
+    }
+
+  // Exercise 6: Implement a function init which returns a List
+  // consisting of all but the last element of a List
+  
+  def init[A](list: List[A]): List[A] = {
+
+  }
+  
+  // Why can't this function be implemented in constant time like
+  // tail?
 }
