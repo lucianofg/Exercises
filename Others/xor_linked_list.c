@@ -15,9 +15,8 @@ void insert_beginning(Node **head, int data) {
     Node *new = (Node *)malloc(sizeof(Node));
     new->data = data;
     new->link = xor(*head, NULL);
-    if (*head) {
+    if (*head)
         (*head)->link = xor(new, xor((*head)->link, NULL));
-    }
     *head = new;
 }
 
@@ -29,9 +28,8 @@ void print_list_forward(Node *head) {
     while (current) {
         printf("%d", current->data);
         next = xor(previous, current->link);
-        if (next) {
+        if (next)
             printf(" -> ");
-        }
         previous = current;
         current = next;
     }
@@ -46,9 +44,8 @@ void print_list_backward(Node *tail) {
     while (current) {
         printf("%d", current->data);
         previous = xor(current->link, next);
-        if (previous) {
+        if (previous)
             printf(" -> ");
-        }
         next = current;
         current = previous;
     }
@@ -76,9 +73,8 @@ int main(void) {
     for (int i = 0; i < 10; i++) {
         insert_beginning(&head, i);
         /* Keeping a reference to the tail of the list */
-        if (i == 0) {
+        if (i == 0)
             last = head;
-        }
     }
 
     printf("FORWARD: \n");
