@@ -39,7 +39,7 @@ int main(void) {
     }
 
     for (int i = 0; i < k; i++) {
-        for (int j = 0; j < k; j++) {
+        for (int j = i; j < k; j++) {
             if (they_overlap(x[i], y[i], s[i], x[j], y[j], s[j])) {
                 adjacency_matrix[i + 2][j + 2] = true;
                 adjacency_matrix[j + 2][i + 2] = true;
