@@ -9,8 +9,9 @@ primes = [3]
 number = 5
 
 while len(primes) < 10_000:
+    square_of_number = sqrt(number)
     for i in primes:
-        if i > sqrt(number):
+        if i > square_of_number:
             primes.append(number)
             number += 2
             break

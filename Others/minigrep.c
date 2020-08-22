@@ -37,7 +37,7 @@ Search parse_argments(int argc, char *argv[]) {
 void search_in_file(char *query, char *filename) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
-        fprintf(stderr, "Error: file not found.");
+        fprintf(stderr, "Error: file not found.\n");
         exit(EXIT_FAILURE);
     }
 
