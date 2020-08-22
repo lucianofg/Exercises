@@ -1,14 +1,12 @@
-# What is the 10 001st prime number?
-# Taken from https://projecteuler.net/problem=7
+# Find the sum of all the primes below two million
+# Taken from https://projecteuler.net/problem=10
 
 from math import sqrt
 
-# I am omitting 2 to avoid unnecessary calculations, since I am only 
-# analysing the odd numbers, this is also why is 10_000 instead 10_001
 primes = [3]
 number = 5
 
-while len(primes) < 10_000:
+while number < 2_000_000:
     square_of_number = sqrt(number)
     for i in primes:
         if i > square_of_number:
@@ -19,4 +17,10 @@ while len(primes) < 10_000:
             number += 2
             break
 
-print(primes[-1])
+# Since we didn't count 2 as prime:
+print(sum(primes) + 2)
+
+
+
+
+
